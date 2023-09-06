@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8">
+  
+  <title>
+    
+    SQL
+    
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  
+<script src="https://cdn.staticfile.org/prism/1.17.1/prism.min.js"></script>
+
+  
+<script src="https://cdn.staticfile.org/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+  
+<link rel="stylesheet" href="/css/prism/material-light.css">
+
+  
+<link rel="stylesheet" href="/css/prism/material-dark.css">
+
+  
+<script src="https://cdn.staticfile.org/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+  
+<link rel="stylesheet" href="https://cdn.staticfile.org/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Noto+Sans+SC:wght@300&display=swap.css">
+
+  
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="I'm Hopefuling" type="application/atom+xml">
+</head>
+<script>
+  function setIsNight(isNight) {
+    localStorage.setItem('isNight', isNight)
+  }
+
+  function getIsNight() {
+    return localStorage.getItem('isNight')
+  }
+
+  function switchTheme() {
+    let isNight = getIsNight()
+    if (isNight === 'false') {
+      document.documentElement.className = 'dark'
+      document.getElementsByClassName('theme-switcher')[0].textContent = '😴'
+      setIsNight('true')
+    } else {
+      document.documentElement.className = 'light'
+      document.getElementsByClassName('theme-switcher')[0].textContent = '😳'
+      setIsNight('false')
+    }
+  }
+
+  let isNight = getIsNight()
+  if (isNight == null) {
+    isNight = 'false'
+    setIsNight('false')
+  }
+  if (isNight === 'false') {
+    document.documentElement.className = 'light'
+  } else {
+    document.documentElement.className = 'dark'
+  }
+</script>
+
+<body>
+  <div class="show-area">
+    <header>
+  <ul class="nav">
+    <li class="nav-child">
+      <a href="/">首页</a>
+    </li>
+    <li class="nav-child">
+      <a href="/categories">分类</a>
+    </li>
+    <li class="nav-child">
+      <a href="/tags">标签</a>
+    </li>
+    <li class="nav-child">
+      <a href="/collection">收藏</a>
+    </li>
+    <li class="nav-child">
+      <a href="/about">关于</a>
+    </li>
+  </ul>
+  <div class="theme-switcher" onclick="switchTheme()">😊</div>
+  <script>
+    if (isNight === "false") {
+      document.getElementsByClassName("theme-switcher")[0].textContent = "😊";
+    } else {
+      document.getElementsByClassName("theme-switcher")[0].textContent = "😴";
+    }
+  </script>
+</header>
+
+    <main class="main-body">
+  <div class="toc-container">
+    <div class="toc-toggle">
+      <i id="toc-b-icon" class="iconfont icon-liebiao-01" onclick="toggleShow()"></i>
+    </div>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux-%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">Linux 记录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hadoop%E5%AE%9E%E8%B7%B5"><span class="toc-number">2.</span> <span class="toc-text">Hadoop实践</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HBase"><span class="toc-number">3.</span> <span class="toc-text">HBase</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-number">3.0.1.</span> <span class="toc-text">常见命令：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-authenticity-of-host-%E2%80%98127-0-0-1%E2%80%99-127-0-0-1-%E2%80%99-can%E2%80%99t-be-established"><span class="toc-number">3.0.2.</span> <span class="toc-text">The authenticity of host ‘127.0.0.1’(127.0.0.1)’  can’t be established.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C%EF%BC%9A"><span class="toc-number">3.0.3.</span> <span class="toc-text">常见操作：</span></a></li></ol></li></ol></li></ol>
+  </div>
+  
+  <script>
+    var show = false
+    function toggleShow() {
+      if (show) {
+        document.getElementsByClassName('toc')[0].className = 'toc'
+        document.getElementById('toc-b-icon').className = 'iconfont icon-liebiao-01'
+      } else {
+        document.getElementsByClassName('toc')[0].className = 'toc show'
+        document.getElementById('toc-b-icon').className = 'iconfont icon-quxiao-01'
+      }
+      show = !show
+    }
+    document.getElementsByClassName('toc')[0].onclick = toggleShow
+  </script>
+  
+  <div class="article-header">
+    <h1 class="article-title">SQL</h1>
+    <div class="article-details">
+      <div class="article-post-date"><span>Posted at </span> 2023-09-01</div>
+      <div class="article-tags">
+        
+        <a href="/tags/大数据">#大数据</a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="article">
+  
+  <h1 id="Linux-记录"><a href="#Linux-记录" class="headerlink" title="Linux 记录"></a>Linux 记录</h1><p>查看磁盘分区上可以使用的空间 df<br> 查看每个文件和目录的磁盘使用空间 du </p>
+<p>安装hbase的时候ubuntu系统空间满了 需要扩容一下</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/toby54king/article/details/105375527">https://blog.csdn.net/toby54king/article/details/105375527</a></p>
+<p>vim下显示行号：在命令模式下 :set nu</p>
+<p>取消行号：在命令模式下 :set nonu</p>
+<p>vim 搜索关键词</p>
+<ol>
+<li>在命令模式(按esc即可)下敲斜杆( &#x2F; )这时在状态栏（也就是屏幕左下脚）就出现了“&#x2F;”</li>
+<li>然后输入你要<strong>查找</strong>的<strong>关键字</strong>敲回车就可以了</li>
+<li>如果你要继续<strong>查找</strong>此<strong>关键字</strong>，敲字符n 就可以继续<strong>查找</strong>了</li>
+<li>敲字符N（大写N）就会向前查询；</li>
+</ol>
+<p>查看历史命令 history </p>
+<p>重新运行历史记录命令  !xx  </p>
+<p>重新执行上一条指令 !!</p>
+<h1 id="Hadoop实践"><a href="#Hadoop实践" class="headerlink" title="Hadoop实践"></a>Hadoop实践</h1><p>常见命令：</p>
+<p>启动Hadoop：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cd &#x2F;usr&#x2F;local&#x2F;hadoop
+.&#x2F;sbin&#x2F;start-dfs.sh #启动hadoop</code></pre>
+
+<p>在HDFS中为hadoop用户创建一个用户目录：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -mkdir -p &#x2F;user&#x2F;hadoop</code></pre>
+
+
+<p>注：“-p”表示如果是多级目录，则父目录和子目录一起创建，这里“&#x2F;user&#x2F;hadoop”就是一个多级目录，因此必须使用参数“-p”，否则会出错。</p>
+<p>显示HDFS中与当前用户hadoop对应的用户目录下的内容：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -ls .  		
+等价于
+.&#x2F;bin&#x2F;hdfs dfs -ls &#x2F;user&#x2F;hadoop</code></pre>
+
+
+
+<p>列出HDFS上的所有目录：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -ls</code></pre>
+
+
+
+<p>使用rm命令删除一个目录（不是“&#x2F;user&#x2F;hadoop&#x2F;input”目录）：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -rm -r &#x2F;input</code></pre>
+
+<p>“-r”参数表示如果删除“&#x2F;input”目录及其子目录下的所有内容，如果要删除的一个目录包含了子目录，则必须使用“-r”参数，否则会执行失败。</p>
+<p>上传文件&#x2F;下载文件</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">上传到hdfs：
+.&#x2F;bin&#x2F;hdfs dfs -put   </code></pre>
+
+<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230904155035472.png" alt="image-20230904155035472"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">下载到本地机：
+.&#x2F;bin&#x2F;hdfs dfs -get</code></pre>
+
+<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230904155235118.png" alt="image-20230904155235118"></p>
+<p>拷贝文件   cp A  to B</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -cp input&#x2F;myLocalFile.txt   &#x2F;input</code></pre>
+
+
+
+
+
+<h1 id="HBase"><a href="#HBase" class="headerlink" title="HBase"></a>HBase</h1><p>环境配置：<a target="_blank" rel="noopener" href="https://dblab.xmu.edu.cn/blog/4252/">https://dblab.xmu.edu.cn/blog/4252/</a></p>
+<p>三种运行模式：</p>
+<ol>
+<li>单机模式：在一台计算机上安装和使用HBase，不涉及数据的分布式存储</li>
+<li>伪分布式模式：在一台计算机上模拟一个小的集群</li>
+<li>分布模式：使用多台计算机实现物理意义上的分布式存储</li>
+</ol>
+<h3 id="常见命令："><a href="#常见命令：" class="headerlink" title="常见命令："></a>常见命令：</h3><p>启动HBase：	首先切换目录至HBase安装目录&#x2F;usr&#x2F;local&#x2F;hbase；再启动HBase。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cd &#x2F;usr&#x2F;local&#x2F;hbase
+bin&#x2F;start-hbase.sh
+bin&#x2F;hbase shell</code></pre>
+
+<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905105241907.png" alt="image-20230905105241907"></p>
+<p>关闭HBase：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">bin&#x2F;stop-hbase.sh</code></pre>
+
+<p>语句[export HBASE_MANAGES_ZK&#x3D;true]表示采用HBase自带的ZooKeeper管理。如果想用外部<br>ZooKeeper管理HBase,可以自行安装、配置ZooKeeper,再把该句删除。</p>
+<p>正确运行关闭顺序：启动Hadoop -&gt; 启动HBase  -&gt; 关闭HBase -&gt;关闭Hadoop</p>
+<h3 id="The-authenticity-of-host-‘127-0-0-1’-127-0-0-1-’-can’t-be-established"><a href="#The-authenticity-of-host-‘127-0-0-1’-127-0-0-1-’-can’t-be-established" class="headerlink" title="The authenticity of host ‘127.0.0.1’(127.0.0.1)’  can’t be established."></a>The authenticity of host ‘127.0.0.1’(127.0.0.1)’  can’t be established.</h3><p>启动Hbase的时候出现了这个问题：。。。。。</p>
+<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905165954225.png" alt="image-20230905165954225"></p>
+<p>前面的一大段报错信息和jps没有显示HQuorumPeer，网上寻找解决方案之后，确定是ssh的问题：</p>
+<p>关闭HBase时也出现错误：</p>
+<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905215906381.png" alt="image-20230905215906381"></p>
+<p>解决方案：</p>
+<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905214609675.png" alt="image-20230905214609675"></p>
+<p>在文件末尾加上</p>
+<pre class="line-numbers language-none"><code class="language-none">StrictHostKeyChecking no
+UserKnownHostsFile &#x2F;dev&#x2F;null</code></pre>
+
+<p>整个文件如下：</p>
+<img src="Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905215351379.png" alt="image-20230905215351379" style="zoom:50%;" />
+
+
+
+<p>:wq保存之后再次连接  ssh localhost</p>
+<p>终于解决了：</p>
+<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905214700712.png" alt="image-20230905214700712"></p>
+<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905204244949.png" alt="image-20230905204244949"></p>
+<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905204340037.png" alt="image-20230905204340037"></p>
+<p>进入shell界面：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">bin&#x2F;hbase shell</code></pre>
+
+<p>这里启动会稍慢，需要等待一会儿</p>
+<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905164228873.png" alt="image-20230905164228873"></p>
+<p>关闭HBase也没有出现错误了（之前报 no master）</p>
+<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905214816072.png" alt="image-20230905214816072"></p>
+<h3 id="常见操作："><a href="#常见操作：" class="headerlink" title="常见操作："></a>常见操作：</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">创建表：
+create  &#39;student&#39;,&#39;Sname&#39;,&#39;Ssex&#39;,&#39;Sage&#39;,&#39;Sdept&#39;,&#39;course&#39;
+	
+查看表的基本信息
+describle &#39;student&#39;
+
+</code></pre>
+
+</div>
+
+</main>
+    <footer>
+  <div class="footer-info">
+    © 2023- Hopefuling | Powerd by
+    <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> | Theme
+    <a target="_blank" rel="noopener" href="https://github.com/mizoreyo/hexo-theme-insnow">Insnow</a>
+    <!-- <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">蜀ICP�?20005398�?</a> -->
+  </div>
+  <div class="footer-info">
+    <!-- <a class="footer-i" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/mizoreyo/static/images/wechat.PNG"
+      ><i class="iconfont icon-wechat"></i
+    ></a> -->
+    <a class="footer-i" target="_blank" rel="noopener" href="https://github.com/mizoreyo"
+      ><i class="iconfont icon-github-fill"></i
+    ></a>
+    <!-- <a class="footer-i" href="/atom.xml"
+      ><i class="iconfont icon-rss"></i
+    ></a> -->
+    <!-- <a class="footer-i" href="mailto:mizoreyo@outlook.com"
+      ><i class="iconfont icon-mail"></i
+    ></a> -->
+  </div>
+</footer>
+
+  </div>
+</body>
+
+
+</html>

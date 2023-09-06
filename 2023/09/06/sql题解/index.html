@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8">
+  
+  <title>
+    
+    I&#39;m Hopefuling
+    
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  
+<script src="https://cdn.staticfile.org/prism/1.17.1/prism.min.js"></script>
+
+  
+<script src="https://cdn.staticfile.org/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+  
+<link rel="stylesheet" href="/css/prism/material-light.css">
+
+  
+<link rel="stylesheet" href="/css/prism/material-dark.css">
+
+  
+<script src="https://cdn.staticfile.org/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+  
+<link rel="stylesheet" href="https://cdn.staticfile.org/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Noto+Sans+SC:wght@300&display=swap.css">
+
+  
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="I'm Hopefuling" type="application/atom+xml">
+</head>
+<script>
+  function setIsNight(isNight) {
+    localStorage.setItem('isNight', isNight)
+  }
+
+  function getIsNight() {
+    return localStorage.getItem('isNight')
+  }
+
+  function switchTheme() {
+    let isNight = getIsNight()
+    if (isNight === 'false') {
+      document.documentElement.className = 'dark'
+      document.getElementsByClassName('theme-switcher')[0].textContent = '😴'
+      setIsNight('true')
+    } else {
+      document.documentElement.className = 'light'
+      document.getElementsByClassName('theme-switcher')[0].textContent = '😳'
+      setIsNight('false')
+    }
+  }
+
+  let isNight = getIsNight()
+  if (isNight == null) {
+    isNight = 'false'
+    setIsNight('false')
+  }
+  if (isNight === 'false') {
+    document.documentElement.className = 'light'
+  } else {
+    document.documentElement.className = 'dark'
+  }
+</script>
+
+<body>
+  <div class="show-area">
+    <header>
+  <ul class="nav">
+    <li class="nav-child">
+      <a href="/">首页</a>
+    </li>
+    <li class="nav-child">
+      <a href="/categories">分类</a>
+    </li>
+    <li class="nav-child">
+      <a href="/tags">标签</a>
+    </li>
+    <li class="nav-child">
+      <a href="/collection">收藏</a>
+    </li>
+    <li class="nav-child">
+      <a href="/about">关于</a>
+    </li>
+  </ul>
+  <div class="theme-switcher" onclick="switchTheme()">😊</div>
+  <script>
+    if (isNight === "false") {
+      document.getElementsByClassName("theme-switcher")[0].textContent = "😊";
+    } else {
+      document.getElementsByClassName("theme-switcher")[0].textContent = "😴";
+    }
+  </script>
+</header>
+
+    <main class="main-body">
+  <div class="toc-container">
+    <div class="toc-toggle">
+      <i id="toc-b-icon" class="iconfont icon-liebiao-01" onclick="toggleShow()"></i>
+    </div>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SQL"><span class="toc-number">1.</span> <span class="toc-text">SQL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL%E5%9F%BA%E7%A1%80"><span class="toc-number">1.1.</span> <span class="toc-text">SQL基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">窗口函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Leetcode%E9%A2%98%E8%A7%A3%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">Leetcode题解：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#511-%E6%B8%B8%E6%88%8F%E7%8E%A9%E6%B3%95%E5%88%86%E6%9E%90-I"><span class="toc-number">2.1.</span> <span class="toc-text">511. 游戏玩法分析 I</span></a></li></ol></li></ol>
+  </div>
+  
+  <script>
+    var show = false
+    function toggleShow() {
+      if (show) {
+        document.getElementsByClassName('toc')[0].className = 'toc'
+        document.getElementById('toc-b-icon').className = 'iconfont icon-liebiao-01'
+      } else {
+        document.getElementsByClassName('toc')[0].className = 'toc show'
+        document.getElementById('toc-b-icon').className = 'iconfont icon-quxiao-01'
+      }
+      show = !show
+    }
+    document.getElementsByClassName('toc')[0].onclick = toggleShow
+  </script>
+  
+  <div class="article-header">
+    <h1 class="article-title"></h1>
+    <div class="article-details">
+      <div class="article-post-date"><span>Posted at </span> 2023-09-06</div>
+      <div class="article-tags">
+        
+      </div>
+    </div>
+  </div>
+  <div class="article">
+  
+  <h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><h2 id="SQL基础"><a href="#SQL基础" class="headerlink" title="SQL基础"></a>SQL基础</h2><p>获取varchar的长度：</p>
+<p>1、char_length(str) </p>
+<ol>
+<li>计算单位：字符 </li>
+<li>不管汉字还是数字或者是字母都算是一个字符</li>
+</ol>
+<p> 2、length(str) </p>
+<ol>
+<li>计算单位：字节 </li>
+<li>utf8编码：一个汉字三个字节，一个数字或字母一个字节。 </li>
+<li>gbk编码：一个汉字两个字节，一个数字或字母一个字节</li>
+</ol>
+<h2 id="窗口函数"><a href="#窗口函数" class="headerlink" title="窗口函数"></a>窗口函数</h2><p><a target="_blank" rel="noopener" href="https://www.sjkjc.com/mysql-ref/window-functions/">https://www.sjkjc.com/mysql-ref/window-functions/</a></p>
+<h1 id="Leetcode题解："><a href="#Leetcode题解：" class="headerlink" title="Leetcode题解："></a>Leetcode题解：</h1><h2 id="511-游戏玩法分析-I"><a href="#511-游戏玩法分析-I" class="headerlink" title="511. 游戏玩法分析 I"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/game-play-analysis-i/">511. 游戏玩法分析 I</a></h2>
+</div>
+
+</main>
+    <footer>
+  <div class="footer-info">
+    © 2023- Hopefuling | Powerd by
+    <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> | Theme
+    <a target="_blank" rel="noopener" href="https://github.com/mizoreyo/hexo-theme-insnow">Insnow</a>
+    <!-- <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">蜀ICP�?20005398�?</a> -->
+  </div>
+  <div class="footer-info">
+    <!-- <a class="footer-i" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/mizoreyo/static/images/wechat.PNG"
+      ><i class="iconfont icon-wechat"></i
+    ></a> -->
+    <a class="footer-i" target="_blank" rel="noopener" href="https://github.com/mizoreyo"
+      ><i class="iconfont icon-github-fill"></i
+    ></a>
+    <!-- <a class="footer-i" href="/atom.xml"
+      ><i class="iconfont icon-rss"></i
+    ></a> -->
+    <!-- <a class="footer-i" href="mailto:mizoreyo@outlook.com"
+      ><i class="iconfont icon-mail"></i
+    ></a> -->
+  </div>
+</footer>
+
+  </div>
+</body>
+
+
+</html>

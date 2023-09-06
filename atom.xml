@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>I&#39;m Hopefuling</title>
+  
+  
+  <link href="https://hopefuling.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://hopefuling.github.io/"/>
+  <updated>2023-09-06T03:25:36.701Z</updated>
+  <id>https://hopefuling.github.io/</id>
+  
+  <author>
+    <name>Hopefuling</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://hopefuling.github.io/2023/09/06/sql%E9%A2%98%E8%A7%A3/"/>
+    <id>https://hopefuling.github.io/2023/09/06/sql%E9%A2%98%E8%A7%A3/</id>
+    <published>2023-09-06T10:56:05.921Z</published>
+    <updated>2023-09-06T03:25:36.701Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><h2 id="SQL基础"><a href="#SQL基础" class="headerlink" title="SQL基础"></a>SQL基础</h2><p>获取varchar的长度：</p><p>1、char_length(str) </p><ol><li>计算单位：字符 </li><li>不管汉字还是数字或者是字母都算是一个字符</li></ol><p> 2、length(str) </p><ol><li>计算单位：字节 </li><li>utf8编码：一个汉字三个字节，一个数字或字母一个字节。 </li><li>gbk编码：一个汉字两个字节，一个数字或字母一个字节</li></ol><h2 id="窗口函数"><a href="#窗口函数" class="headerlink" title="窗口函数"></a>窗口函数</h2><p><a href="https://www.sjkjc.com/mysql-ref/window-functions/">https://www.sjkjc.com/mysql-ref/window-functions/</a></p><h1 id="Leetcode题解："><a href="#Leetcode题解：" class="headerlink" title="Leetcode题解："></a>Leetcode题解：</h1><h2 id="511-游戏玩法分析-I"><a href="#511-游戏玩法分析-I" class="headerlink" title="511. 游戏玩法分析 I"></a><a href="https://leetcode.cn/problems/game-play-analysis-i/">511. 游戏玩法分析 I</a></h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;SQL&quot;&gt;&lt;a href=&quot;#SQL&quot; class=&quot;headerlink&quot; title=&quot;SQL&quot;&gt;&lt;/a&gt;SQL&lt;/h1&gt;&lt;h2 id=&quot;SQL基础&quot;&gt;&lt;a href=&quot;#SQL基础&quot; class=&quot;headerlink&quot; title=&quot;SQL基础&quot;&gt;&lt;/a&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://hopefuling.github.io/2023/09/06/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E4%B9%A6%E7%AD%BE/"/>
+    <id>https://hopefuling.github.io/2023/09/06/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E4%B9%A6%E7%AD%BE/</id>
+    <published>2023-09-06T10:55:58.065Z</published>
+    <updated>2023-09-06T06:44:09.343Z</updated>
+    
+    <content type="html"><![CDATA[<p>C++</p><p>Linux下C++轻量级Web服务器实践项目</p><p><a href="https://github.com/qinguoyi/TinyWebServer">https://github.com/qinguoyi/TinyWebServer</a></p><p><a href="https://huixxi.github.io/2020/06/02/%E5%B0%8F%E7%99%BD%E8%A7%86%E8%A7%92%EF%BC%9A%E4%B8%80%E6%96%87%E8%AF%BB%E6%87%82%E7%A4%BE%E9%95%BF%E7%9A%84TinyWebServer/">https://huixxi.github.io/2020/06/02/%E5%B0%8F%E7%99%BD%E8%A7%86%E8%A7%92%EF%BC%9A%E4%B8%80%E6%96%87%E8%AF%BB%E6%87%82%E7%A4%BE%E9%95%BF%E7%9A%84TinyWebServer/</a></p><p>C++那些事 <a href="https://light-city.github.io/">https://light-city.github.io/</a></p><p>SQL</p><p>数据库教程<a href="https://www.sjkjc.com/mysql-ref/window-functions/">https://www.sjkjc.com/mysql-ref/window-functions/</a>  （内有sql函数语法知识点）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;C++&lt;/p&gt;
+&lt;p&gt;Linux下C++轻量级Web服务器实践项目&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/qinguoyi/TinyWebServer&quot;&gt;https://github.com/qinguoyi/TinyWebServer&lt;/a</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://hopefuling.github.io/2023/09/06/hello-world/"/>
+    <id>https://hopefuling.github.io/2023/09/06/hello-world/</id>
+    <published>2023-09-06T07:32:59.090Z</published>
+    <updated>2023-09-06T07:27:03.734Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SQL</title>
+    <link href="https://hopefuling.github.io/2023/09/01/Hadoop/"/>
+    <id>https://hopefuling.github.io/2023/09/01/Hadoop/</id>
+    <published>2023-09-01T02:36:03.000Z</published>
+    <updated>2023-09-06T11:02:02.931Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Linux-记录"><a href="#Linux-记录" class="headerlink" title="Linux 记录"></a>Linux 记录</h1><p>查看磁盘分区上可以使用的空间 df<br> 查看每个文件和目录的磁盘使用空间 du </p><p>安装hbase的时候ubuntu系统空间满了 需要扩容一下</p><p><a href="https://blog.csdn.net/toby54king/article/details/105375527">https://blog.csdn.net/toby54king/article/details/105375527</a></p><p>vim下显示行号：在命令模式下 :set nu</p><p>取消行号：在命令模式下 :set nonu</p><p>vim 搜索关键词</p><ol><li>在命令模式(按esc即可)下敲斜杆( &#x2F; )这时在状态栏（也就是屏幕左下脚）就出现了“&#x2F;”</li><li>然后输入你要<strong>查找</strong>的<strong>关键字</strong>敲回车就可以了</li><li>如果你要继续<strong>查找</strong>此<strong>关键字</strong>，敲字符n 就可以继续<strong>查找</strong>了</li><li>敲字符N（大写N）就会向前查询；</li></ol><p>查看历史命令 history </p><p>重新运行历史记录命令  !xx  </p><p>重新执行上一条指令 !!</p><h1 id="Hadoop实践"><a href="#Hadoop实践" class="headerlink" title="Hadoop实践"></a>Hadoop实践</h1><p>常见命令：</p><p>启动Hadoop：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cd &#x2F;usr&#x2F;local&#x2F;hadoop.&#x2F;sbin&#x2F;start-dfs.sh #启动hadoop</code></pre><p>在HDFS中为hadoop用户创建一个用户目录：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -mkdir -p &#x2F;user&#x2F;hadoop</code></pre><p>注：“-p”表示如果是多级目录，则父目录和子目录一起创建，这里“&#x2F;user&#x2F;hadoop”就是一个多级目录，因此必须使用参数“-p”，否则会出错。</p><p>显示HDFS中与当前用户hadoop对应的用户目录下的内容：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -ls .  等价于.&#x2F;bin&#x2F;hdfs dfs -ls &#x2F;user&#x2F;hadoop</code></pre><p>列出HDFS上的所有目录：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -ls</code></pre><p>使用rm命令删除一个目录（不是“&#x2F;user&#x2F;hadoop&#x2F;input”目录）：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -rm -r &#x2F;input</code></pre><p>“-r”参数表示如果删除“&#x2F;input”目录及其子目录下的所有内容，如果要删除的一个目录包含了子目录，则必须使用“-r”参数，否则会执行失败。</p><p>上传文件&#x2F;下载文件</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">上传到hdfs：.&#x2F;bin&#x2F;hdfs dfs -put   </code></pre><p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230904155035472.png" alt="image-20230904155035472"></p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">下载到本地机：.&#x2F;bin&#x2F;hdfs dfs -get</code></pre><p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230904155235118.png" alt="image-20230904155235118"></p><p>拷贝文件   cp A  to B</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -cp input&#x2F;myLocalFile.txt   &#x2F;input</code></pre><h1 id="HBase"><a href="#HBase" class="headerlink" title="HBase"></a>HBase</h1><p>环境配置：<a href="https://dblab.xmu.edu.cn/blog/4252/">https://dblab.xmu.edu.cn/blog/4252/</a></p><p>三种运行模式：</p><ol><li>单机模式：在一台计算机上安装和使用HBase，不涉及数据的分布式存储</li><li>伪分布式模式：在一台计算机上模拟一个小的集群</li><li>分布模式：使用多台计算机实现物理意义上的分布式存储</li></ol><h3 id="常见命令："><a href="#常见命令：" class="headerlink" title="常见命令："></a>常见命令：</h3><p>启动HBase：首先切换目录至HBase安装目录&#x2F;usr&#x2F;local&#x2F;hbase；再启动HBase。</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cd &#x2F;usr&#x2F;local&#x2F;hbasebin&#x2F;start-hbase.shbin&#x2F;hbase shell</code></pre><p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905105241907.png" alt="image-20230905105241907"></p><p>关闭HBase：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">bin&#x2F;stop-hbase.sh</code></pre><p>语句[export HBASE_MANAGES_ZK&#x3D;true]表示采用HBase自带的ZooKeeper管理。如果想用外部<br>ZooKeeper管理HBase,可以自行安装、配置ZooKeeper,再把该句删除。</p><p>正确运行关闭顺序：启动Hadoop -&gt; 启动HBase  -&gt; 关闭HBase -&gt;关闭Hadoop</p><h3 id="The-authenticity-of-host-‘127-0-0-1’-127-0-0-1-’-can’t-be-established"><a href="#The-authenticity-of-host-‘127-0-0-1’-127-0-0-1-’-can’t-be-established" class="headerlink" title="The authenticity of host ‘127.0.0.1’(127.0.0.1)’  can’t be established."></a>The authenticity of host ‘127.0.0.1’(127.0.0.1)’  can’t be established.</h3><p>启动Hbase的时候出现了这个问题：。。。。。</p><p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905165954225.png" alt="image-20230905165954225"></p><p>前面的一大段报错信息和jps没有显示HQuorumPeer，网上寻找解决方案之后，确定是ssh的问题：</p><p>关闭HBase时也出现错误：</p><p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905215906381.png" alt="image-20230905215906381"></p><p>解决方案：</p><p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905214609675.png" alt="image-20230905214609675"></p><p>在文件末尾加上</p><pre class="line-numbers language-none"><code class="language-none">StrictHostKeyChecking noUserKnownHostsFile &#x2F;dev&#x2F;null</code></pre><p>整个文件如下：</p><img src="Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905215351379.png" alt="image-20230905215351379" style="zoom:50%;" /><p>:wq保存之后再次连接  ssh localhost</p><p>终于解决了：</p><p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905214700712.png" alt="image-20230905214700712"></p><p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905204244949.png" alt="image-20230905204244949"></p><p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905204340037.png" alt="image-20230905204340037"></p><p>进入shell界面：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">bin&#x2F;hbase shell</code></pre><p>这里启动会稍慢，需要等待一会儿</p><p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905164228873.png" alt="image-20230905164228873"></p><p>关闭HBase也没有出现错误了（之前报 no master）</p><p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905214816072.png" alt="image-20230905214816072"></p><h3 id="常见操作："><a href="#常见操作：" class="headerlink" title="常见操作："></a>常见操作：</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">创建表：create  &#39;student&#39;,&#39;Sname&#39;,&#39;Ssex&#39;,&#39;Sage&#39;,&#39;Sdept&#39;,&#39;course&#39;查看表的基本信息describle &#39;student&#39;</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Linux-记录&quot;&gt;&lt;a href=&quot;#Linux-记录&quot; class=&quot;headerlink&quot; title=&quot;Linux 记录&quot;&gt;&lt;/a&gt;Linux 记录&lt;/h1&gt;&lt;p&gt;查看磁盘分区上可以使用的空间 df&lt;br&gt; 查看每个文件和目录的磁盘使用空间 du &lt;/p&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="大数据" scheme="https://hopefuling.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+  </entry>
+  
+</feed>
