@@ -5,7 +5,7 @@
   
   <title>
     
-    SQL
+    BigData
     
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -127,7 +127,7 @@
   </script>
   
   <div class="article-header">
-    <h1 class="article-title">SQL</h1>
+    <h1 class="article-title">BigData</h1>
     <div class="article-details">
       <div class="article-post-date"><span>Posted at </span> 2023-09-01</div>
       <div class="article-tags">
@@ -184,11 +184,11 @@
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">上传到hdfs：
 .&#x2F;bin&#x2F;hdfs dfs -put   </code></pre>
 
-<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230904155035472.png" alt="image-20230904155035472"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191839386.png" alt="image-20230904155035472"></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">下载到本地机：
 .&#x2F;bin&#x2F;hdfs dfs -get</code></pre>
 
-<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230904155235118.png" alt="image-20230904155235118"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191839323.png" alt="image-20230904155235118"></p>
 <p>拷贝文件   cp A  to B</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -cp input&#x2F;myLocalFile.txt   &#x2F;input</code></pre>
 
@@ -208,40 +208,40 @@
 bin&#x2F;start-hbase.sh
 bin&#x2F;hbase shell</code></pre>
 
-<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905105241907.png" alt="image-20230905105241907"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191839558.png" alt="image-20230905105241907"></p>
 <p>关闭HBase：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">bin&#x2F;stop-hbase.sh</code></pre>
 
 <p>语句[export HBASE_MANAGES_ZK&#x3D;true]表示采用HBase自带的ZooKeeper管理。如果想用外部<br>ZooKeeper管理HBase,可以自行安装、配置ZooKeeper,再把该句删除。</p>
 <p>正确运行关闭顺序：启动Hadoop -&gt; 启动HBase  -&gt; 关闭HBase -&gt;关闭Hadoop</p>
 <h3 id="The-authenticity-of-host-‘127-0-0-1’-127-0-0-1-’-can’t-be-established"><a href="#The-authenticity-of-host-‘127-0-0-1’-127-0-0-1-’-can’t-be-established" class="headerlink" title="The authenticity of host ‘127.0.0.1’(127.0.0.1)’  can’t be established."></a>The authenticity of host ‘127.0.0.1’(127.0.0.1)’  can’t be established.</h3><p>启动Hbase的时候出现了这个问题：。。。。。</p>
-<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905165954225.png" alt="image-20230905165954225"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191839746.png" alt="image-20230905165954225"></p>
 <p>前面的一大段报错信息和jps没有显示HQuorumPeer，网上寻找解决方案之后，确定是ssh的问题：</p>
 <p>关闭HBase时也出现错误：</p>
-<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905215906381.png" alt="image-20230905215906381"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191839759.png" alt="image-20230905215906381"></p>
 <p>解决方案：</p>
-<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905214609675.png" alt="image-20230905214609675"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191839411.png" alt="image-20230905214609675"></p>
 <p>在文件末尾加上</p>
 <pre class="line-numbers language-none"><code class="language-none">StrictHostKeyChecking no
 UserKnownHostsFile &#x2F;dev&#x2F;null</code></pre>
 
 <p>整个文件如下：</p>
-<img src="Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905215351379.png" alt="image-20230905215351379" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191840844.png" alt="image-20230905215351379" style="zoom:50%;" />
 
 
 
 <p>:wq保存之后再次连接  ssh localhost</p>
 <p>终于解决了：</p>
-<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905214700712.png" alt="image-20230905214700712"></p>
-<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905204244949.png" alt="image-20230905204244949"></p>
-<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905204340037.png" alt="image-20230905204340037"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191840319.png" alt="image-20230905214700712"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191840489.png" alt="image-20230905204244949"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191840828.png" alt="image-20230905204340037"></p>
 <p>进入shell界面：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">bin&#x2F;hbase shell</code></pre>
 
 <p>这里启动会稍慢，需要等待一会儿</p>
-<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905164228873.png" alt="image-20230905164228873"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191840973.png" alt="image-20230905164228873"></p>
 <p>关闭HBase也没有出现错误了（之前报 no master）</p>
-<p><img src="/Hadoop%E5%AE%9E%E8%B7%B5.assets/image-20230905214816072.png" alt="image-20230905214816072"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191840197.png" alt="image-20230905214816072"></p>
 <h3 id="常见操作："><a href="#常见操作：" class="headerlink" title="常见操作："></a>常见操作：</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">创建表：
 create  &#39;student&#39;,&#39;Sname&#39;,&#39;Ssex&#39;,&#39;Sage&#39;,&#39;Sdept&#39;,&#39;course&#39;
 	
