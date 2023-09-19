@@ -139,7 +139,7 @@
   </div>
   <div class="article">
   
-  <p><strong>author</strong>:  Hopefuling</p>
+  <p><strong>author:  Hopefuling</strong></p>
 <hr>
 <p>参考指导手册：</p>
 <p>xv6中文指导手册：<a target="_blank" rel="noopener" href="http://xv6.dgs.zone/">http://xv6.dgs.zone/</a></p>
@@ -714,11 +714,11 @@ git checkout syscall</code></pre>
 <hr>
 <p>因此这步要做的就是将trace这个命令加载到系统调用，添加一些内容到一些文件里面去。</p>
 <p>首先是在用户态的 <code>user/user.h</code> 中申明一下，使得用户能通过调用这个接口去调用汇编代码，从而进入内核：</p>
-<p><img src="C:/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20230915212348816.png" alt="image-20230915212348816"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191923947.png" alt="image-20230915212348816"></p>
 <p>新增在了第25行，接受一个参数为mask，即系统调用号。</p>
 <p>如前文所讲，我们需要使用汇编去实现这个跳转函数。不过，这个汇编是 perl 的脚本自动生成的，所以需要去更改这个脚本（<code>user/usys.pl</code>）。</p>
 <p>vim进入usys.pl，并在最后新增：entry(“trace”);   </p>
-<p><img src="C:/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20230915212714998.png" alt="image-20230915212714998"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309191923445.png" alt="image-20230915212714998"></p>
 <p>（注：之后我们 make qemu 的时候，在脚本中新加的这个 entry 就会在 user&#x2F;usys.S 中输出：）</p>
 <pre class="line-numbers language-nasm" data-language="nasm"><code class="language-nasm">.global trace
 trace:
@@ -1258,7 +1258,7 @@ e1000_recv(void)
 <p>:wq保存退出。重新编译，没出现问题。</p>
 <p>&#x3D;&#x3D;完结撒花&#x3D;&#x3D;</p>
 <p>再说一遍必看：<a target="_blank" rel="noopener" href="https://ttzytt.com/2022/08/xv6_lab8_record/">https://ttzytt.com/2022/08/xv6_lab8_record/</a></p>
-<p>终于结束了。真有种轻舟已过万重山的感觉。。。。。😅😅😅😅😅😅😅😅😅😅😅😅😅😅😅😅😅😅😅😅</p>
+<p>终于结束了。真有种轻舟已过万重山的感觉。。。。。😅😅😅😅😅😅😅😅😅😅😅😅😅😅😅😅😅</p>
 <hr>
 <h1 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h1><h2 id="1-1进程和内存"><a href="#1-1进程和内存" class="headerlink" title="1.1进程和内存"></a>1.1进程和内存</h2><p>一、终端执行命令过程：</p>
 <p>用户输入命令，shell通过getcmd()读取一行，然后调用<code>fork</code>创建一个shell进程的副本。父进程调用<code>wait</code>，子进程执行命令。例如：当用户向shell输入echo hello时，runcmd(user&#x2F;sh.c:58) 将以echo hello为参数被调用来执行实际命令。对于“echo hello”，它将调用exec(user&#x2F;sh.c:78)。如果exec成功，那么子进程将从echo而不是runcmd执行命令，在某刻echo会调用exit，这将导致父进程从main(user&#x2F;sh.c:78)中的wait返回。</p>
