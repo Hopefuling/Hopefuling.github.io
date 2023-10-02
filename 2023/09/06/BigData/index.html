@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8">
+  
+  <title>
+    
+    I&#39;m Hopefuling
+    
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  
+<script src="https://cdn.staticfile.org/prism/1.17.1/prism.min.js"></script>
+
+  
+<script src="https://cdn.staticfile.org/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+  
+<link rel="stylesheet" href="/css/prism/material-light.css">
+
+  
+<link rel="stylesheet" href="/css/prism/material-dark.css">
+
+  
+<script src="https://cdn.staticfile.org/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+  
+<link rel="stylesheet" href="https://cdn.staticfile.org/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Noto+Sans+SC:wght@300&display=swap.css">
+
+  
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="I'm Hopefuling" type="application/atom+xml">
+</head>
+<script>
+  function setIsNight(isNight) {
+    localStorage.setItem('isNight', isNight)
+  }
+
+  function getIsNight() {
+    return localStorage.getItem('isNight')
+  }
+
+  function switchTheme() {
+    let isNight = getIsNight()
+    if (isNight === 'false') {
+      document.documentElement.className = 'dark'
+      document.getElementsByClassName('theme-switcher')[0].textContent = '😴'
+      setIsNight('true')
+    } else {
+      document.documentElement.className = 'light'
+      document.getElementsByClassName('theme-switcher')[0].textContent = '😳'
+      setIsNight('false')
+    }
+  }
+
+  let isNight = getIsNight()
+  if (isNight == null) {
+    isNight = 'false'
+    setIsNight('false')
+  }
+  if (isNight === 'false') {
+    document.documentElement.className = 'light'
+  } else {
+    document.documentElement.className = 'dark'
+  }
+</script>
+
+<body>
+  <div class="show-area">
+    <header>
+  <ul class="nav">
+    <li class="nav-child">
+      <a href="/">首页</a>
+    </li>
+    <li class="nav-child">
+      <a href="/categories">分类</a>
+    </li>
+    <li class="nav-child">
+      <a href="/tags">标签</a>
+    </li>
+    <li class="nav-child">
+      <a href="/collection">收藏</a>
+    </li>
+    <li class="nav-child">
+      <a href="/about">关于</a>
+    </li>
+  </ul>
+  <div class="theme-switcher" onclick="switchTheme()">😊</div>
+  <script>
+    if (isNight === "false") {
+      document.getElementsByClassName("theme-switcher")[0].textContent = "😊";
+    } else {
+      document.getElementsByClassName("theme-switcher")[0].textContent = "😴";
+    }
+  </script>
+</header>
+
+    <main class="main-body">
+  <div class="toc-container">
+    <div class="toc-toggle">
+      <i id="toc-b-icon" class="iconfont icon-liebiao-01" onclick="toggleShow()"></i>
+    </div>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux-%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">Linux 记录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hadoop%E5%AE%9E%E8%B7%B5"><span class="toc-number">2.</span> <span class="toc-text">Hadoop实践</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%96%99%E6%94%B6%E9%9B%86"><span class="toc-number">2.1.</span> <span class="toc-text">资料收集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80"><span class="toc-number">2.2.</span> <span class="toc-text">基础</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HBase"><span class="toc-number">3.</span> <span class="toc-text">HBase</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4"><span class="toc-number">3.1.</span> <span class="toc-text">常见命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98"><span class="toc-number">3.2.</span> <span class="toc-text">配置问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C"><span class="toc-number">3.3.</span> <span class="toc-text">常见操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E5%AE%9E%E4%BE%8B"><span class="toc-number">3.4.</span> <span class="toc-text">编程实例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NoSQL"><span class="toc-number">4.</span> <span class="toc-text">NoSQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CAP%E7%90%86%E8%AE%BA"><span class="toc-number">5.</span> <span class="toc-text">CAP理论</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NewSQL"><span class="toc-number">6.</span> <span class="toc-text">NewSQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MongoDB"><span class="toc-number">7.</span> <span class="toc-text">MongoDB</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hive"><span class="toc-number">8.</span> <span class="toc-text">Hive</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Impala"><span class="toc-number">9.</span> <span class="toc-text">Impala</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#YARN"><span class="toc-number">10.</span> <span class="toc-text">YARN</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Pig"><span class="toc-number">11.</span> <span class="toc-text">Pig</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tez"><span class="toc-number">12.</span> <span class="toc-text">Tez</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Spark"><span class="toc-number">13.</span> <span class="toc-text">Spark</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RDD%E7%89%B9%E6%80%A7%EF%BC%9A"><span class="toc-number">13.1.</span> <span class="toc-text">RDD特性：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RDD%E4%B9%8B%E9%97%B4%E7%9A%84%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="toc-number">13.2.</span> <span class="toc-text">RDD之间的依赖关系：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Scala"><span class="toc-number">14.</span> <span class="toc-text">Scala</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Kafka"><span class="toc-number">15.</span> <span class="toc-text">Kafka</span></a></li></ol>
+  </div>
+  
+  <script>
+    var show = false
+    function toggleShow() {
+      if (show) {
+        document.getElementsByClassName('toc')[0].className = 'toc'
+        document.getElementById('toc-b-icon').className = 'iconfont icon-liebiao-01'
+      } else {
+        document.getElementsByClassName('toc')[0].className = 'toc show'
+        document.getElementById('toc-b-icon').className = 'iconfont icon-quxiao-01'
+      }
+      show = !show
+    }
+    document.getElementsByClassName('toc')[0].onclick = toggleShow
+  </script>
+  
+  <div class="article-header">
+    <h1 class="article-title"></h1>
+    <div class="article-details">
+      <div class="article-post-date"><span>Posted at </span> 2023-09-06</div>
+      <div class="article-tags">
+        
+      </div>
+    </div>
+  </div>
+  <div class="article">
+  
+  <p>弱鸡学大数据&#x3D;_&#x3D;</p>
+<hr>
+<h1 id="Linux-记录"><a href="#Linux-记录" class="headerlink" title="Linux 记录"></a>Linux 记录</h1><p>查看磁盘分区上可以使用的空间 df<br> 查看每个文件和目录的磁盘使用空间 du </p>
+<p>安装hbase的时候ubuntu系统空间满了 需要扩容一下</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/toby54king/article/details/105375527">https://blog.csdn.net/toby54king/article/details/105375527</a></p>
+<p>vim下显示行号：在命令模式下 :set nu</p>
+<p>取消行号：在命令模式下 :set nonu</p>
+<p>vim 搜索关键词</p>
+<ol>
+<li>在命令模式(按esc即可)下敲斜杆( &#x2F; )这时在状态栏（也就是屏幕左下脚）就出现了“&#x2F;”</li>
+<li>然后输入你要<strong>查找</strong>的<strong>关键字</strong>敲回车就可以了</li>
+<li>如果你要继续<strong>查找</strong>此<strong>关键字</strong>，敲字符n 就可以继续<strong>查找</strong>了</li>
+<li>敲字符N（大写N）就会向前查询；</li>
+</ol>
+<p>查看历史命令 history </p>
+<p>重新运行历史记录命令  !xx  </p>
+<p>重新执行上一条指令 !!</p>
+<h1 id="Hadoop实践"><a href="#Hadoop实践" class="headerlink" title="Hadoop实践"></a>Hadoop实践</h1><h2 id="资料收集"><a href="#资料收集" class="headerlink" title="资料收集"></a>资料收集</h2><p>官方手册：<a target="_blank" rel="noopener" href="https://hadoop.apache.org/docs/r1.0.4/cn/hdfs_user_guide.html">https://hadoop.apache.org/docs/r1.0.4/cn/hdfs_user_guide.html</a></p>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>常见命令：</p>
+<p>启动Hadoop：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cd &#x2F;usr&#x2F;local&#x2F;hadoop
+.&#x2F;sbin&#x2F;start-dfs.sh #启动hadoop</code></pre>
+
+<p>在HDFS中为hadoop用户创建一个用户目录：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -mkdir -p &#x2F;user&#x2F;hadoop</code></pre>
+
+
+<p>注：“-p”表示如果是多级目录，则父目录和子目录一起创建，这里“&#x2F;user&#x2F;hadoop”就是一个多级目录，因此必须使用参数“-p”，否则会出错。</p>
+<p>显示HDFS中与当前用户hadoop对应的用户目录下的内容：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -ls .  		
+等价于
+.&#x2F;bin&#x2F;hdfs dfs -ls &#x2F;user&#x2F;hadoop</code></pre>
+
+
+
+<p>列出HDFS上的所有目录：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -ls</code></pre>
+
+
+
+<p>使用rm命令删除一个目录（不是“&#x2F;user&#x2F;hadoop&#x2F;input”目录）：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -rm -r &#x2F;input</code></pre>
+
+<p>“-r”参数表示如果删除“&#x2F;input”目录及其子目录下的所有内容，如果要删除的一个目录包含了子目录，则必须使用“-r”参数，否则会执行失败。</p>
+<p>上传文件&#x2F;下载文件</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">上传到hdfs：
+.&#x2F;bin&#x2F;hdfs dfs -put   </code></pre>
+
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309071109292.png" alt="image-20230904155035472"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">下载到本地机：
+.&#x2F;bin&#x2F;hdfs dfs -get</code></pre>
+
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309261502168.png" alt="image-20230926150226075"></p>
+<p>拷贝文件   cp A  to B</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.&#x2F;bin&#x2F;hdfs dfs -cp input&#x2F;myLocalFile.txt   &#x2F;input</code></pre>
+
+
+
+
+
+<hr>
+<p>Hadoop由三个核心组件组成：</p>
+<ul>
+<li><strong>Hadoop Distributed File System</strong> <strong>(HDFS) –</strong> It is the storage layer of Hadoop.<br>Hadoop分布式文件系统（HDFS） - 它是Hadoop的存储层。</li>
+<li><strong>Map-Reduce –</strong> It is the data processing layer of Hadoop.<br>Map-Reduce – 它是Hadoop的数据处理层。</li>
+<li><strong>YARN –</strong> It is the resource management layer of Hadoop.<br>YARN – 它是Hadoop的资源管理层。</li>
+</ul>
+<h1 id="HBase"><a href="#HBase" class="headerlink" title="HBase"></a>HBase</h1><p>环境配置：<a target="_blank" rel="noopener" href="https://dblab.xmu.edu.cn/blog/4252/">https://dblab.xmu.edu.cn/blog/4252/</a></p>
+<p>三种运行模式：</p>
+<ol>
+<li>单机模式：在一台计算机上安装和使用HBase，不涉及数据的分布式存储</li>
+<li>伪分布式模式：在一台计算机上模拟一个小的集群</li>
+<li>分布模式：使用多台计算机实现物理意义上的分布式存储</li>
+</ol>
+<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><p>启动HBase：	首先切换目录至HBase安装目录&#x2F;usr&#x2F;local&#x2F;hbase；再启动HBase。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cd &#x2F;usr&#x2F;local&#x2F;hbase
+bin&#x2F;start-hbase.sh
+bin&#x2F;hbase shell</code></pre>
+
+<p>关闭HBase：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">bin&#x2F;stop-hbase.sh</code></pre>
+
+<p>语句[export HBASE_MANAGES_ZK&#x3D;true]表示采用HBase自带的ZooKeeper管理。如果想用外部<br>ZooKeeper管理HBase,可以自行安装、配置ZooKeeper,再把该句删除。</p>
+<p>正确运行关闭顺序：启动Hadoop -&gt; 启动HBase  -&gt; 关闭HBase -&gt;关闭Hadoop</p>
+<h2 id="配置问题"><a href="#配置问题" class="headerlink" title="配置问题"></a>配置问题</h2><p><code>**The authenticity of host &#39;127.0.0.1&#39;(127.0.0.1)&#39;  can&#39;t be established.**</code></p>
+<p>启动Hbase的时候出现了这个问题：。。。。。</p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309071110516.png" alt="image-20230905165954225"></p>
+<p>前面的一大段报错信息和jps没有显示HQuorumPeer，网上寻找解决方案之后，确定是ssh的问题：</p>
+<p>关闭HBase时也出现错误：</p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309071110267.png" alt="image-20230905215906381"></p>
+<p>解决方案：</p>
+<p>操作文件或目录的用户，有3种不同类型：<strong>文件所有者、群组用户、其他用户</strong>。最高位表示文件所有者的权限值，中间位表示群组用户的权限值，最低位则表示其他用户的权限值，所以，chmod 777中，三个数字7分别对应上面三种用户，权限值都为7。</p>
+<p>设置文件或目录的777权限意味着所有用户都可以读取，写入和执行文件或目录。</p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309071110651.png" alt="image-20230905214609675"></p>
+<p>在文件末尾加上</p>
+<pre class="line-numbers language-none"><code class="language-none">StrictHostKeyChecking no
+UserKnownHostsFile &#x2F;dev&#x2F;null</code></pre>
+
+<p>整个文件如下：</p>
+<img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309071111587.png" alt="image-20230905215351379" style="zoom:50%;" />
+
+
+
+<p>:wq保存之后再次连接  ssh localhost</p>
+<p>终于解决了：</p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309071110060.png" alt="image-20230905214700712"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309071111597.png" alt="image-20230905204244949"></p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309071111922.png" alt="image-20230905204340037"></p>
+<p>进入shell界面：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">bin&#x2F;hbase shell</code></pre>
+
+<p>这里启动会稍慢，需要等待一会儿</p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309071111704.png" alt="image-20230905164228873"></p>
+<p>关闭HBase也没有出现错误了（之前报 no master）</p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309071111021.png" alt="image-20230905214816072"></p>
+<h2 id="常见操作"><a href="#常见操作" class="headerlink" title="常见操作"></a>常见操作</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">#创建表：
+create  &#39;student&#39;,&#39;Sname&#39;,&#39;Ssex&#39;,&#39;Sage&#39;,&#39;Sdept&#39;,&#39;course&#39;
+	
+#查看表的基本信息
+describle &#39;student&#39;
+
+#增  
+put &#39;student&#39;,&#39;95001&#39;,&#39;Sname&#39;,&#39;LiYing&#39;   #即为student表添加了学号为95001，名字为LiYing的一行数据，其行键为95001。
+
+#删
+#删除数据
+delete &#39;student&#39;,&#39;95001&#39;,&#39;Ssex&#39;  #即删除了student表中95001行下的Ssex列的所有数据
+deleteall &#39;student&#39;,&#39;95001&#39;   #即删除了student表中的95001行的全部数据
+
+#删除表   删除表有两步，第一步先让该表不可用，第二步删除表。
+disable &#39;student&#39;  
+drop &#39;student&#39;
+
+#查
+#HBase中有两个用于查看数据的命令：
+1. get命令，用于查看表的某一行数据；
+2. scan命令用于查看某个表的全部数据。
+
+get &#39;student&#39;,&#39;95001&#39;   #返回的是‘student’表‘95001’行的数据
+scan &#39;student&#39;		#返回的是‘student’表的全部数据
+
+#查询表的历史版本，需要两步。
+create &#39;teacher&#39;,&#123;NAME&#x3D;&gt;&#39;username&#39;,VERSIONS&#x3D;&gt;5&#125;  #1、在创建表的时候，指定保存的版本数（假设指定为5）     
+put &#39;teacher&#39;,&#39;91001&#39;,&#39;username&#39;,&#39;Mary&#39;   #2、插入数据然后更新数据，使其产生历史版本数据，注意：这里插入数据和更新数据都是用put命令
+put &#39;teacher&#39;,&#39;91001&#39;,&#39;username&#39;,&#39;Mary1&#39;
+put...
+get &#39;teacher&#39;,&#39;91001&#39;,&#123;COLUMN&#x3D;&gt;&#39;username&#39;,VERSIONS&#x3D;&gt;5&#125; #查询时，指定查询的历史版本数。默认会查询出最新的数据。（有效取值为1到5）</code></pre>
+
+<p>关闭HBase：	exit</p>
+<p>注意：这里退出HBase数据库是退出对数据库表的操作，而不是停止启动HBase数据库后台运行(需要运行.&#x2F;sbin&#x2F;stop-hbash.sh)。</p>
+<h2 id="编程实例"><a href="#编程实例" class="headerlink" title="编程实例"></a>编程实例</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.hbase.*;
+import org.apache.hadoop.hbase.client.*;
+import org.apache.hadoop.hbase.util.Bytes;
+ 
+import java.io.IOException;
+public class ExampleForHBase &#123;
+    public static Configuration configuration; &#x2F;&#x2F;对配置信息管理的一个类
+    public static Connection connection;	   &#x2F;&#x2F;对连接进行管理的一个类
+    public static Admin admin;				   &#x2F;&#x2F;对数据库进行管理的一个类，用于管理对表的创建删除 
+    public static void main(String[] args)throws IOException&#123;
+        init();
+        createTable(&quot;student&quot;,new String[]&#123;&quot;score&quot;&#125;);
+        insertData(&quot;student&quot;,&quot;zhangsan&quot;,&quot;score&quot;,&quot;English&quot;,&quot;69&quot;);
+        insertData(&quot;student&quot;,&quot;zhangsan&quot;,&quot;score&quot;,&quot;Math&quot;,&quot;86&quot;);
+        insertData(&quot;student&quot;,&quot;zhangsan&quot;,&quot;score&quot;,&quot;Computer&quot;,&quot;77&quot;);
+        
+        getData(&quot;student&quot;, &quot;zhangsan&quot;, &quot;score&quot;,&quot;English&quot;);
+        close();
+    &#125;
+ 
+    public static void init()&#123;
+        configuration  &#x3D; HBaseConfiguration.create();
+        &#x2F;&#x2F;设置HBase存储的根路径，效果等同于创建hbase-site.xml文件写入路径信息
+        &#x2F;&#x2F;伪分布式路径为hdfs:&#x2F;&#x2F;localhost:9000&#x2F;hbase；单机路径为file:&#x2F;&#x2F;&#x2F;DIRECTORT&#x2F;hbase
+        configuration.set(&quot;hbase.rootdir&quot;,&quot;hdfs:&#x2F;&#x2F;localhost:9000&#x2F;hbase&quot;);
+        try&#123;
+            connection &#x3D; ConnectionFactory.createConnection(configuration);
+            admin &#x3D; connection.getAdmin();
+        &#125;catch (IOException e)&#123;
+            e.printStackTrace();
+        &#125;
+    &#125;
+ 
+    public static void close()&#123;
+        try&#123;
+            if(admin !&#x3D; null)&#123;
+                admin.close();
+            &#125;
+            if(null !&#x3D; connection)&#123;
+                connection.close();
+            &#125;
+        &#125;catch (IOException e)&#123;
+            e.printStackTrace();
+        &#125;
+    &#125;
+    
+ &#x2F;*创建表
+ *	@param myTableName 表名
+ *  @param colFamily 列族数组
+ *  @throws Exception
+ *&#x2F;
+    public static void createTable(String myTableName,String[] colFamily) throws IOException &#123;
+        TableName tableName &#x3D; TableName.valueOf(myTableName);
+        if(admin.tableExists(tableName))&#123;
+            System.out.println(&quot;talbe is exists!&quot;);
+        &#125;else &#123;
+            TableDescriptorBuilder tableDescriptor &#x3D; TableDescriptorBuilder.newBuilder(tableName);
+            for(String str:colFamily)&#123;
+                ColumnFamilyDescriptor family &#x3D; 
+					ColumnFamilyDescriptorBuilder.newBuilder(Bytes.toBytes(str)).build();
+                tableDescriptor.setColumnFamily(family);
+            &#125;
+            admin.createTable(tableDescriptor.build());
+        &#125; 
+    &#125;
+ 	&#x2F;&#x2F;添加数据四维：表名 行键 列族 列名
+    public static void insertData(String tableName,String rowKey,String colFamily,String col,String val) throws IOException &#123; 
+        Table table &#x3D; connection.getTable(TableName.valueOf(tableName));
+        Put put &#x3D; new Put(rowKey.getBytes());
+        put.addColumn(colFamily.getBytes(),col.getBytes(), val.getBytes());
+        table.put(put);
+        table.close(); 
+    &#125;
+ 
+    public static void getData(String tableName,String rowKey,String colFamily, String col)throws  IOException&#123; 
+        Table table &#x3D; connection.getTable(TableName.valueOf(tableName));
+        Get get &#x3D; new Get(rowKey.getBytes());
+        get.addColumn(colFamily.getBytes(),col.getBytes());
+        &#x2F;&#x2F;result类管理输出的结果
+        Result result &#x3D; table.get(get); 
+        System.out.println(new String(result.getValue(colFamily.getBytes(),col&#x3D;&#x3D;null?null:col.getBytes())));
+        table.close(); 
+    &#125;
+&#125;</code></pre>
+
+<p>Java与shell命令：</p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;查看张三的English成绩：
+java: getData(&quot;student&quot;,&quot;zhangsan&quot;,&quot;score&quot;,&quot;English&quot;);
+shell: get &#39;student&#39;,&#39;zhangsan&#39;,&#123;COLUMN&#x3D;&gt;&#39;score:English&#39;&#125;;
+ 
+&#x2F;&#x2F;插入数据：
+java： insertData:(&quot;student&quot;.&quot;zhangsan&quot;,&quot;score&quot;,&quot;English&quot;,&quot;69&quot;);
+shell:  put &#39;student&#39;,&#39;zhangsan&#39;,&#39;score:English&#39;,&#39;69&#39;;
+</code></pre>
+
+
+
+
+
+<h1 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h1><h1 id="CAP理论"><a href="#CAP理论" class="headerlink" title="CAP理论"></a>CAP理论</h1><p>C: 一致性（Consistency）指任何一个读操作总能读到之前完成的写操作的结果。也就是说在我们分布式环境中，多点的数据必须是一致的。所有节点在同一时间要具有相同的数据。<br>A: 可用性（Availability）指快速的获取数据，可以在确定时间内返回操作结果，保证每个请求不管成功还是失败都有响应。<br>P: 分区容忍性（Partition tolerance）指当网络出现分区的情况（即系统中的一部分节点无法和其他节点进行通信）分离的系统也能够正常运行。即：系统中任意信息丢失不会影响系统正常运作</p>
+<h1 id="NewSQL"><a href="#NewSQL" class="headerlink" title="NewSQL"></a>NewSQL</h1><p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309261304620.png" alt="image-20230926130424433"></p>
+<h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309261307573.png" alt="image-20230926130714370"></p>
+<p>一个MongDb可以建立多个数据库</p>
+<p>MongDB的默认数据库为”db“，该数据库存储在data目录中</p>
+<p>MongDB的单个实例可以容纳多个独立的数据库，每一个都有自己的集合和权限，不同的数据库也放置在不同的文件中</p>
+<p>文档</p>
+<p>文档是一个键值（key-value）对，即BSON；MongDB的文档不需要设置相同的字段，并且相同的字段不需要相同的数据类型</p>
+<p>一个键值对就是一个文档</p>
+<p>RDMBMS与MongoDB对应的术语</p>
+<div class="article-table"><table>
+<thead>
+<tr>
+<th></th>
+<th>数据库服务端和客户端</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mysqld&#x2F;Oracle</td>
+<td>mongod</td>
+</tr>
+<tr>
+<td>mysql&#x2F;sqlplus</td>
+<td>mongo</td>
+</tr>
+</tbody></table></div>
+<p>集合</p>
+<p>集合就是MongoDB文档组，类似于RDBMS中的表格。集合存在于数据库中，没有固定的结构，可对集合插入不同形式和类型的数据</p>
+<h1 id="Hive"><a href="#Hive" class="headerlink" title="Hive"></a>Hive</h1><p>Hive本身并不支持数据存储和处理，可以看作是提供了一种编程语言，依赖于分布式文件系统HDFS存储数据、分布式并行计算模型MapReduce处理数据，并借鉴了SQL语言设计了新的查询语言HiveQL，支持类似SQL的接口，很容易移植。</p>
+<p>Hive具有两方面特性：</p>
+<p>（1）采用批处理方式处理海量数据</p>
+<p>Hive会把HiveQL语句转换成MapReduce任务进行；数据仓库存储的是静态数据，对静态数据的分析适合采用批处理方式，不需要快速响应给出结果，而且数据本身也不会频繁变化</p>
+<p>（2）Hive提供了一系列对数据进行提取、转换、加载（ETL）的工具</p>
+<p>可以存储、查询和分析存储在Hadoop中的大规模数据；这些工具能够很好地满足数据仓库各种应用场景。</p>
+<p>与Pig的区别：</p>
+<p>Pig主要用于数据仓库的ETL环节；Hive主要用于数据仓库海量数据的批处理分析。</p>
+<p>与传统数据库的区别：</p>
+<ul>
+<li>数据插入：只支持批量导入</li>
+<li>数据更新：不支持数据更新</li>
+<li>支持索引、分区</li>
+<li>执行延迟高</li>
+<li>扩展性好</li>
+</ul>
+<p>对外访问提供的接口：</p>
+<ul>
+<li>CLI：一种命令行工具</li>
+<li>HWI：Hive Web Interface 是Hive的Web接口</li>
+<li>JDBC和ODBC：开放数据库连接接口</li>
+<li>Thrift Server：基于Thrift架构开发的接口，允许外界通过这个接口，实现对Hive仓库的RPC调用</li>
+</ul>
+<p>驱动模块（Driver）：</p>
+<p>包含编译器、优化器、执行器，负责把HiveQL语句转化成一系列MapReduce作业</p>
+<p>元数据存储模块（Metastore）:</p>
+<p>是一个独立的关系型数据库，，可以通过Mysql存储</p>
+<p>Hive HA（Hive High Avalability高可用性解决方案）：</p>
+<p>基本原理：</p>
+<p>对外添加HAproxy访问</p>
+<hr>
+<p>当启动MapReduce程序时，Hive是不会生成MapReduce程序的，需要通过一个表示‘Job执行计划“的xml文件驱动执行内置的、原生的Mapper和Reducer模块。Hive通过JobTracker通信来初始化MapReduce任务，不必部署在JobTracker所在的管理节点上执行</p>
+<h1 id="Impala"><a href="#Impala" class="headerlink" title="Impala"></a>Impala</h1><p>三大组件：</p>
+<p>Impalad：负责协调客户端提交的查询的执行，与HDFS的数据节点运行在同一节点上</p>
+<p>Statestore：负责收集分布在集群中各个Impalad进程的资源信息用于查询调度</p>
+<p>CLI：给用户提供查询使用的命令行工具</p>
+<p>同时也提供了Hue、JDBC及ODBC的使用接口</p>
+<p>Impala的元数据是直接存储在Hive中的，它是借助Hive来存储Impala的元数据。Impala采用与Hive相同的元数据、相同的SQL语法、相同的ODBC驱动程序和用户接口——为了在一个Hadoop平台上可以统一部署Hive和Impala等分析工具，实现在一个平台上可以同时满足批处理和实时查询。</p>
+<p>Impala查询执行过程：</p>
+<ol>
+<li>当用户提交查询时，Impala先创建一个负责协调客户端提交的查询的Impala进程，该进程会向Impala State Store提交注册订阅信息，State Store会创建一个statestore进程，statestored进程通过创建多个线程来处理Impala的注册订阅信息。</li>
+<li>用户通过CLI客户端提交一个查询到impala进程，Impala的Query Planner对SQL语句进行解析，生成解析树，Planner把这个查询的解析树变成若干PlannerFragment，发送到Query Coordinator.</li>
+<li>Coordinator通过Mysql元数据中获取元数据，从HDFS的名称节点中获取数据地址，以得到存储这个查询相关数据的所有节点</li>
+<li>Coordinator初始化相应impalad上的任务执行，即把查询任务分配给所有存储这个查询相关数据的数据节点</li>
+<li>Query Executor 通过流式交换中间输出，并由Query Coordinator 汇聚来自各个impalad的结果</li>
+<li>Coordinator 把汇总后的结果返回给CLI客户端</li>
+</ol>
+<p>Impala与HIve比较：</p>
+<p>不同点：</p>
+<ol>
+<li>Hive比较适合长时间的批处理查询分析，而Impala适合实时交互式SQL查询；</li>
+<li>Hive依赖于Mapreduce计算框架，Impala把执行计划表现为一棵完整的执行计划树，直接分发执行计划到各个Impala执行查询。</li>
+<li>Hive在执行过程中，如果内存放不下所有数据则会使用外存，以保证查询能顺利执行；而Impala在遇到内存放不下的时候，不会利用外存，所以Impala目前处理查询时会受到一定的的限制。</li>
+</ol>
+<p>相同点：</p>
+<ol>
+<li>Hive与Impala使用相同的存储数据池，，都支持把数据存储与HDFS和HBase中；</li>
+<li>Hive和Impala使用相同的元数据</li>
+<li>Hive与Impala中对SQL的解释处理比较相似，都是通过词法分析生成执行计划</li>
+</ol>
+<p>实际使用上应该将两者结合起来使用：可以先使用Hive进行数据转换处理，之后再使用Impala，在Hive处理后的结果数据集上进行快速的数据分析。</p>
+<p><img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202309301725536.png" alt="image-20230930172529321"></p>
+<h1 id="YARN"><a href="#YARN" class="headerlink" title="YARN"></a>YARN</h1><p>与MappReduce1.0的比较：</p>
+<ol>
+<li>MapReduce1.0既是一个计算框架，又是一个资源管理调度框架，但是只能支持MapReduce编程框架；YARN是一个纯粹的资源调度管理框架，在它上面可以允许包括MapReduce在内的不同类型的计算框架（只要编程实现相应的ApplicationMaster）</li>
+<li>YARN以容器为单位，而不是以slot为单位，资源管理比MapReduce1.0更高效；</li>
+</ol>
+<p>YARN的目标：</p>
+<p>实现一个集群多个框架（即一个集群上部署一个统一的资源调度框架YARN，在YARN上可以部署其他各种计算框架），如：</p>
+<ul>
+<li>MapReduce实现离线批处理</li>
+<li>Impala实现实时交互式查询分析</li>
+<li>使用Storm实现流式数据实时分析</li>
+<li>使用Spark实现迭代计算</li>
+</ul>
+<p>由YARN为这些计算框架提供统一的资源调度管理服务，并且能够根据各种计算框架的需求，调整各自占用的资源，实现集群资源共享和资源弹性收缩；同时也可以实现一个集群上的不同应用负载混搭，有效提高集群的利用率；不同计算框架可以共享底层存储，避免了数据跨集群移动。</p>
+<h1 id="Pig"><a href="#Pig" class="headerlink" title="Pig"></a>Pig</h1><p>是整个Hadoop生态系统中的一个组件，提供了类似SQL的Pig Latin语言（包含Filter过滤、group By分组 、Join连接、OrderBy分组等操作，同时也支持用户自定义函数）；用户只需要编写简单的Pig Latin语句就可以完成各种复杂的数据分析任务。系统会自动把用户编写的脚本转换成MapReduce作业放在Hadoop集群上运行，而且具备对生成MapReduce程序进行自动优化的功能。</p>
+<ul>
+<li>通过LOAD语句去文件系统加载数据</li>
+<li>通过一系列转换对数据进行处理</li>
+<li>通过STORE语句把处理结果输出到文件当中去，或者用DUMP语句把处理结果输出到屏幕上</li>
+</ul>
+<p>示例：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">&#x2F;&#x2F;处理用户访问网页情况的统计分析
+visits &#x3D; load&#39;&#x2F;data&#x2F;visits&#39; as (user, url, time);
+
+&#x2F;&#x2F;对网页进行分组（根据url）
+gVisits &#x3D; group visits by url;
+&#x2F;&#x2F;对每个网页进行同级
+visitCounts &#x3D; foreach gVisits generate url,count(visits);
+
+&#x2F;&#x2F;得到的表的结构 visitCounts(url, visits)
+urlInfo &#x3D; load&#39;&#x2F;data&#x2F;urlInfo&#39; as (url,category,pRank);
+visitCounts &#x3D; join visitCounts by url,urlInfo by url;
+
+&#x2F;&#x2F;得到的连接结果 表的结构visitCounts(url,visits,category,pRank);
+gCatagories &#x3D; group visitCounts by category;
+topUrls &#x3D; foreach gCategories generate top(visitCounts,10);
+
+store topUrls into &#39;&#x2F;data&#x2F;topUrls&#39;;
+</code></pre>
+
+<p>之后Pig会将代码自动转化成MapReduce任务执行。</p>
+<h1 id="Tez"><a href="#Tez" class="headerlink" title="Tez"></a>Tez</h1><p>Tez是Apache开源的支持DAG作业的计算框架，直接来源于MapReduce框架；核心思想是把Map和Reduce两个操作进一步拆开。</p>
+<h1 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h1><p>由Scala编写成的，</p>
+<p>特点：</p>
+<ul>
+<li>基于内存大数据计算，带来更高的迭代运算效率</li>
+<li>基于DAG的任务调度执行机制，优于MapReduce的迭代执行机制，以支持循环数据流与内存计算</li>
+<li>在借鉴Hadoop MapReduce优点的同时，很好的解决了MapReduce所面临的问题 </li>
+<li>容易使用：支持使用Scala、Java、Python和R语言进行编程；同时还可以通过Spark Shell进行交互式编程</li>
+<li>通用性：提供了完整强大的技术栈，包括SQL查询、流式计算、机器学习和图算法组件</li>
+<li>运行模式多样：可以运行于独立的集群模式中，可以运行在Hadoop中，也可以运行于Amazon EC2等云环境中，并且可以访问HDFS、HBase、Hive等多种数据源</li>
+<li>可同时满足三种企业级应用场景，即同时支持批处理、交互式查询、流数据处理</li>
+</ul>
+<h2 id="RDD特性："><a href="#RDD特性：" class="headerlink" title="RDD特性："></a>RDD特性：</h2><p>RDD（Resilient Distributed Datasets），即弹性分布式数据集</p>
+<p>DAG（Directed Acyclic Graph）即有向无环图</p>
+<p>Spark的核心是建立在统一的抽象RDD之上的。使得Spark的各个组件可以无缝地进行集成，在同一个应用程序中完成大数据计算任务。</p>
+<p>解决的问题：许多迭代式计算任务时，需要反复的重用中间结果，导致了大量的数据复制、磁盘读写等</p>
+<p>概念：一个RDD就是一个分布式对象集合，本质上是一个只读的分区记录集合，，每个RDD可以分成多个分区，每个分区就是一i个数据集片段，并且一个RDD的不同分区可以被保存到集群中不同的节点，从而可以在集群中的不同节点上进行并行计算。RDD提供了一种高度受限的共享内存模型，即RDD是只读的记录分区的集合，不能直接修改，只能基于稳定的物理存储中的数据集来创建RDD。</p>
+<p>RDD提供了一组丰富的操作以支持常见的数据运算，分成”行动“和”转换“两种类型，前者用于执行计算并指定输出的形式，后者指定RDD之间的相互依赖关系。两类操作的主要区别是：转换操作（如map、filter、groupBy、join等）接受RDD并返回RDD，而行动操作（如count、collect等）接受RDD但是返回非RDD，即输出一个值或结果。</p>
+<p>RDD只支持粗粒度的数据转换操作，而不是针对某个数据的细粒度修改。因此RDD比较适用于数据集中元素执行相同操作的批处理应用；而不适用于需要异步、细粒度状态的应用（如web应用程序、增量式的网页爬虫等）。</p>
+<p>RDD转换和行动的系列操作，被称为一个”血缘关系“，即DAG图的拓扑排序的结果。</p>
+<p>Spark采用RDD之后可以实现高效计算的原因：</p>
+<ol>
+<li>高效的容错性：血缘关系、重新计算丢失分区、无需回滚系统、重算过程在不同节点之间并行、只记录粗粒度的操作；</li>
+<li>中间结果持久化到内存，数据在内存中的多个RDD操作之间进行传递，避免了不必要的读写磁盘开销；</li>
+<li>存放的数据可以是Java对象，避免了不必要的对象序列化和反序列化开销。</li>
+</ol>
+<h2 id="RDD之间的依赖关系："><a href="#RDD之间的依赖关系：" class="headerlink" title="RDD之间的依赖关系："></a>RDD之间的依赖关系：</h2><p>窄依赖：一个父RDD对应一个子RDD的分区，或多个父RDD的分区对应于一个子RDD的分区；</p>
+<p>宽依赖：一个父RDD的一个分区对应一个子RDD的多个分区。</p>
+<p>总而言之，父RDD的一个分区只被一个子RDD的一个分区所使用就是窄依赖，否则就是宽依赖。</p>
+<p>窄依赖的典型操作有：map、filter、union等；</p>
+<p>宽依赖的典型操作有：groupByKey、sortByKey等。</p>
+<p>对于Join操作，有两种情况：</p>
+<ol>
+<li>对输入进行协同划分，属于窄依赖，即多个父RDD的某一分区的所有“键”落在子RDD的同一个分区内，不会产生同一个RDD的某一分区落在子RDD的两个分区的情况</li>
+<li>对输入做非协同划分，属于宽依赖。</li>
+</ol>
+<img src="https://raw.githubusercontent.com/Hopefuling/pic_save/master/img/202310012334629.png" alt="image-20231001233433409" style="zoom: 40%;" />
+
+
+
+<p>Spark通过分析各个RDD的依赖关系生成了DAG，再通过分析各个RDD的分区之间的依赖关系来决定如何划分Stage，具体划分方法：</p>
+<p>在DAG中进行反向解析，遇到宽依赖就断开；遇到窄依赖就把当前的RDD加入到Stage中；将窄依赖尽量划分在同一个Stage中，可以实现流水式计算，从而使得数据可以直接在内存中进行交换，避免了磁盘IO开销。</p>
+<p>整个RDD运行过程：</p>
+<ol>
+<li>创建RDD对象</li>
+<li>SparkContext负责计算RDD之间的依赖关系，构建DAG</li>
+<li>DAGScheduler负责把DAG图分解成多个Stage，每个Stage中包含了多个Task，每个Task会被TaskScheduler分发给各个WorkerNode上的Executor去执行</li>
+</ol>
+<h1 id="Scala"><a href="#Scala" class="headerlink" title="Scala"></a>Scala</h1><p>特性：</p>
+<ul>
+<li>具备强大的并发性，支持函数式编程，可以更好的支持分布式系统</li>
+<li>语法简洁，提供优雅的API</li>
+<li>兼容Java，运行速度快，且能融合到Hadoop生态圈中</li>
+<li>提供了REPL（read-eval-print-loop交互式解释器），提高了程序开发效率</li>
+</ul>
+<h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><p>特点：</p>
+<ul>
+<li>一种高吞吐量的分布式发布订阅消息系统，用户通过Kafka系统可以发布大量的消息，同时也能实时订阅消费信息</li>
+<li>同时满足在线实时处理和批量离线处理</li>
+<li>作为数据交换枢纽，不同类型的分布式系统可以统一接入到Kafka，实现和Hadoop各个组件之间的不同类型数据的实时高效交换。</li>
+</ul>
+
+</div>
+
+</main>
+    <footer>
+  <div class="footer-info">
+    © 2023- Hopefuling | Powerd by
+    <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> | Theme
+    <!-- <a target="_blank" rel="noopener" href="https://github.com/mizoreyo/hexo-theme-insnow">Insnow</a>  -->
+    <!-- <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">蜀ICP�?20005398�?</a> -->
+  </div>
+  
+  <div class="footer-info">
+    <!-- <a class="footer-i" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/mizoreyo/static/images/wechat.PNG"
+      ><i class="iconfont icon-wechat"></i
+    ></a> -->
+    <a class="footer-i" target="_blank" rel="noopener" href="https://github.com/mizoreyo"
+      ><i class="iconfont icon-github-fill"></i
+    ></a>
+    <!-- <a class="footer-i" href="/atom.xml"
+      ><i class="iconfont icon-rss"></i
+    ></a> -->
+    <!-- <a class="footer-i" href="mailto:mizoreyo@outlook.com"
+      ><i class="iconfont icon-mail"></i
+    ></a> -->
+  </div>
+</footer>
+
+  </div>
+</body>
+
+
+</html>
